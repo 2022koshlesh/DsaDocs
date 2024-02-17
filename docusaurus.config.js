@@ -86,6 +86,14 @@ const config = {
           },
         ],
       },
+      algolia: {
+        apiKey: '587a5731b7e970560aa00be0657b42e6',
+        indexName: 'hello-trex',
+        appId: '2U67935JDX',
+        contextualSearch: true,
+        // Optional
+
+      },
       footer: {
         style: 'dark',
         links: [
