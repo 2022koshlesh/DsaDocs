@@ -14,7 +14,7 @@ Let's discover **Python in less than 5 minutes**.
 
 - Click on **[Downloads](https://www.python.org/downloads/)**
 
-- Select the suitable version and install it.
+- Make Sure to Select the **Suitable Version** and **Install It**.
 
 ## Creating a Python File
 
