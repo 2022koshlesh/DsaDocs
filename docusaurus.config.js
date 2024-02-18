@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'PyDocs',
   tagline: 'Unlock the Power of Python with PyDocs: Your Ultimate Documentation Resource.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/python_logo.webp',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -69,7 +69,7 @@ const config = {
         title: 'PyDocs',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/python_logo.webp',
         },
         items: [
           {
@@ -137,7 +137,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} PyDocs, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
