@@ -80,7 +80,13 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            to: '#', label: 'ChatBot', position: 'left'
+          },
+          {
+            to: '#', label: 'Community', position: 'left'
+          },
+          {
+            href: 'https://github.com/Shashank01729/hello-trex',
             label: 'GitHub',
             position: 'right',
           },
@@ -132,7 +138,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/Shashank01729/hello-trex',
               },
             ],
           },
