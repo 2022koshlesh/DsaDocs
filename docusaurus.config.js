@@ -134,7 +134,7 @@ const config = {
             items: [
               {
                 label: 'Coding Platform',
-                to: '/Coding Platform',
+                to: '/codingPlatform/coding-platforms',
               },
               {
                 label: 'GitHub',
