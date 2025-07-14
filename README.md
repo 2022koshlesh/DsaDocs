@@ -19,7 +19,7 @@
 
 ## 🌐 Live Demo
 
-🖥️ Check it out here: [**DsaDocs Live →**](https://your-docusaurus-site.example.com)
+🖥️ Check it out here: [**DsaDocs Live →**](https://dsa-docs-lemon.vercel.app/)
 
 ---
 
