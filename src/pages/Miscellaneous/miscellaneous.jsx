@@ -1,12 +1,11 @@
-// pages/Miscellaneous.jsx
 import React from 'react';
 import Layout from '@theme/Layout';
 import CardItems from './card/cardItems';
 import { certifications } from '../../../details/certifications';
 import { jobProfile } from '../../../details/jobProfile';
-import  { softwareTools } from '../../../details/softwareTools'; 
+import { softwareTools } from '../../../details/softwareTools'; 
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import styles from './card/card.module.css';
+import styles from '././card/card.module.css';
 
 const Miscellaneous = () => {
   return (

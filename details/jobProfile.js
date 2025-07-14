@@ -1,4 +1,3 @@
-// data/countries-data.js
 export const jobProfile = [
   {
     name: 'LinkedIn',
@@ -19,7 +18,6 @@ export const jobProfile = [
     name: 'Naukri',
     image: '/img/naukari.png',
     website: 'https://www.naukri.com/',
-    
   },
   {
     name: 'unstop',
@@ -46,5 +44,4 @@ export const jobProfile = [
     image: '/img/mea.jpeg',
     website: 'https://internship.mea.gov.in/internship',
   },
-  
 ];

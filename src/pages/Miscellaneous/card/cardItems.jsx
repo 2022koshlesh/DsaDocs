@@ -1,4 +1,3 @@
-// components/CardItems.jsx
 import React, { useRef } from 'react';
 import styles from './card.module.css';
 
@@ -42,7 +41,6 @@ const CardItems = ({ certifications, variant = "container" }) => {
     </div>
   );
 };
-
 
 CardItems.defaultProps = {
   certifications: [],

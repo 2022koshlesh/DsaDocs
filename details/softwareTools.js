@@ -1,4 +1,3 @@
-// data/countries-data.js
 export const softwareTools = [
   {
     name: 'GitHub',
@@ -29,7 +28,6 @@ export const softwareTools = [
     name: 'Vercel',
     image: '/img/vercel.png',
     website: 'https://vercel.com/',
-    
   },
   {
     name: 'Postman',
@@ -101,5 +99,4 @@ export const softwareTools = [
     image: '/img/reddit.jpg',
     website: 'https://www.reddit.com/',
   },
-  
 ];
