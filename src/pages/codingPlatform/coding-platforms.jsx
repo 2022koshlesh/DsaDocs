@@ -26,7 +26,7 @@ const profiles = [
   {
     title: "CSES",
     link: "https://cses.fi/problemset/",
-    img: "/img/CSES.png",
+    img: "/img/cses.png",
     alt: "CSES",
   },
   {
