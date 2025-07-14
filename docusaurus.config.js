@@ -116,16 +116,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: '#',
+                label: 'Linkedin',
+                href: 'https://www.linkedin.com/in/koshlesh-kumar2003/',
+              },
+              {
+                label: 'Instagram',
+                href: 'https://www.instagram.com/koshlesh_raj?utm_source=qr&igsh=MWFmcmNqYXRsdWk3NA==',
               },
               {
                 label: 'Discord',
-                href: '#',
-              },
-              {
-                label: 'Twitter',
-                href: '#',
+                href: 'https://discord.com/channels/hacker_915',
               },
             ],
           },
@@ -138,7 +138,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: '#',
+                href: 'https://github.com/2022koshlesh/DsaDocs',
               },
             ],
           },
