@@ -1,4 +1,4 @@
-export const skills = {
+const skills = {
   "Frontend": [
     { id: "HTML5_skill", content: "HTML5" },
     { id: "CSS3_skill", content: "CSS3" },
@@ -25,7 +25,7 @@ export const skills = {
     { id: "Python_skill", content: "Python" },
     { id: "Golang_skill", content: "Golang" },
     { id: "DSA_skill", content: "Data Structures & Algorithms" },
-    { id: "Competitive_Programming", content: "Competitive Programming" },
+    { id: "Competitive_Programming", content: "Competitive Programming" }
   ],
   "Infrastructure": [
     { id: "MongoDB_skill", content: "MongoDB" },
@@ -37,3 +37,5 @@ export const skills = {
     { id: "GitHub_skill", content: "GitHub" }
   ]
 };
+
+export default skills;
