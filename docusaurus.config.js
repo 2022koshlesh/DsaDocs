@@ -8,9 +8,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'PyDocs',
-  tagline: 'Unlock the Power of Python with PyDocs: Your Ultimate Documentation Resource.',
-  favicon: 'img/python_logo.webp',
+  title: 'DsaDocs',
+  tagline: 'Unlock the Power of DSA with DsaDocs: Your Ultimate Documentation Resource.',
+  favicon: 'img/dsa.webp',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -46,13 +46,6 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -66,10 +59,10 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'PyDocs',
+        title: 'DsaDocs',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/python_logo.webp',
+          src: 'img/dsa.webp',
         },
         items: [
           {
@@ -78,15 +71,22 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/codingPlatform/coding-platforms', label: 'Coding Platforms', position: 'left'},
           {
-            to: '#', label: 'ChatBot', position: 'left'
+            to: '/skills/SkillsGrid', label: 'Skills', position: 'left'
+          },
+          
+          {
+            to: '/MockInterview/mock-interview', label: 'Mock Interview', position: 'left'
           },
           {
-            to: '#', label: 'Community', position: 'left'
+            to: '/ExploreDomain/explore-domain', label: 'Explore Domain', position: 'left'
           },
           {
-            href: 'https://github.com/Shashank01729/hello-trex',
+            to: '/Miscellaneous/miscellaneous', label: 'Miscellaneous', position: 'left'
+          },
+          {
+            href: '#',
             label: 'GitHub',
             position: 'right',
           },
@@ -117,15 +117,15 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: '#',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: '#',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: '#',
               },
             ],
           },
@@ -133,17 +133,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Coding Platform',
+                to: '/Coding Platform',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/Shashank01729/hello-trex',
+                href: '#',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} PyDocs, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} DsaDocs, Made with Experiences.`,
       },
       prism: {
         theme: prismThemes.github,

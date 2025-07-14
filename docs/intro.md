@@ -4,38 +4,42 @@ sidebar_position: 1
 
 # Tutorial Intro
 
-Let's discover **Python in less than 5 minutes**.
+Let's discover **DSA in less than 5 minutes**.
 
 ## Getting Started
 
-- Start by installing **Python**.
+- Start by installing **VS-Code**.
 
-- Go to **[python.org](https://www.python.org/)**
+- Go to **[code.visualstudio.com](https://code.visualstudio.com/)**
 
-- Click on **[Downloads](https://www.python.org/downloads/)**
+- Click on **[Downloads](https://code.visualstudio.com/Download)**
 
 - Make Sure to Select the **Suitable Version** and **Install It**.
 
-## Creating a Python File
+## Chose any Programming Language as per your convenience here it's totally based on c++
 
-Get started by **creating a new `FileName.py` file**.
+## Creating a C++ File
 
-Or **Try Python Immediately** with **[Python Compiler](https://www.jdoodle.com/python3-programming-online)**.
+Get started by **creating a new `FileName.cpp` file**.
+
+Or **Try CPP Immediately** with **[C++ Compiler](https://www.onlinegdb.com/online_c++_compiler)**.
 
 #
 Write the below code on the **Online Compiler** or in your **Local Machine**:
 #
 
-```python title="FileName.py"
-print("Hello, World!")
+```cpp title="FileName.cpp"
+cout<<("Hello, World!")
 ```
 
-## Running `FileName.py`
+## Running `FileName.cpp`
 
 Open cmd in your machine and type:
 
 ```cmd title="cmd"
-python Filename.py
+g++ Filename.cpp -o Filename
+Filename
+
 ```
 
 

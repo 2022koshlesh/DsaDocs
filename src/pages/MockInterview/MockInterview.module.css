@@ -1,0 +1,295 @@
+.containerCenter {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.lottieWrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.mockTitle {
+  margin-top: 30rem;
+}
+
+.cardWrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 6rem 0 6rem; /* Increased left padding from 2.5rem to 4rem */
+}
+
+.card {
+  flex: 0 1 calc(33.333% - 1rem);
+  min-width: 250px;
+  max-width: 300px;
+  position: relative;
+  border-radius: 1.75rem;
+  padding: 2px;
+  background: transparent;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Moving border strip effect */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1.75rem;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 324deg,
+    #ffd700 324deg,
+    #ffed4e 340deg,
+    #ffd700 356deg,
+    transparent 356deg,
+    transparent 360deg
+  );
+  animation: rotateBorder 3s linear infinite;
+  z-index: 1;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border-radius: calc(1.75rem - 2px);
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Enhanced golden strip effect */
+.card.enhanced::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 315deg,
+    rgba(255, 215, 0, 0.3) 315deg,
+    #ffd700 324deg,
+    #ffed4e 330deg,
+    #ffc107 336deg,
+    #ffd700 340deg,
+    #ffed4e 346deg,
+    #ffd700 354deg,
+    rgba(255, 215, 0, 0.3) 354deg,
+    transparent 360deg
+  );
+  filter: blur(0.5px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.cardInner {
+  background: rgb(23, 23, 22);
+  border: 1px solid rgb(244, 244, 244);
+  border-radius: calc(1.75rem - 4px);
+  padding: 1.5rem;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.card:hover .cardInner {
+  background: rgba(0, 0, 0, 0.95);
+  border-color: rgb(51, 65, 85);
+}
+
+.cardFront {
+  text-align: center;
+}
+
+.cardFront h3 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.cardFront p {
+  color: rgb(148, 163, 184);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.cardImage {
+  display: block;
+  margin: 0 auto;
+  width: 255px;
+  height: 255px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(51, 65, 85);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+.cardBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: calc(1.75rem - 4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: rotateY(180deg);
+  z-index: 4;
+}
+
+.card:hover .cardBack {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.card:hover .cardFront {
+  opacity: 0;
+  transform: rotateY(-180deg);
+}
+
+.ctaButtonWrapper {
+  text-align: center;
+}
+
+.ctaButtonWrapper a {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ffd700, #ffed4e, #ffc107);
+  color: #1a1a1a;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+  border: 1px solid rgba(255, 215, 0, 0.5);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.ctaButtonWrapper a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(135deg, #ffed4e, #ffd700, #ffb300);
+}
+
+/* Alternative strip effect with more defined edges */
+.card.sharp::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 324deg,
+    #ffd700 324deg,
+    #ffd700 360deg,
+    transparent 360deg
+  );
+}
+
+/* Slower animation variant */
+.card.slow::before {
+  animation: rotateBorder 5s linear infinite;
+}
+
+/* Faster animation variant */
+.card.fast::before {
+  animation: rotateBorder 2s linear infinite;
+}
+
+/* Pulsing effect on the strip */
+.card.pulse::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 324deg,
+    #ffd700 324deg,
+    #ffed4e 340deg,
+    #ffd700 356deg,
+    transparent 356deg,
+    transparent 360deg
+  );
+  animation: rotateBorder 3s linear infinite, pulseGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    filter: brightness(1) blur(0px);
+  }
+  100% {
+    filter: brightness(1.5) blur(1px);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .card {
+    flex: 0 1 calc(50% - 0.75rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .cardWrapper {
+    justify-content: flex-start;
+    padding: 0 1rem 0 2rem; /* Maintained some left padding on mobile */
+    gap: 1rem;
+  }
+  
+  .card {
+    flex: 0 1 100%;
+    max-width: 100%;
+    min-width: 280px;
+  }
+}
+
+/* Optional: Double border effect */
+.card.double::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 162deg,
+    #ffd700 162deg,
+    #ffed4e 170deg,
+    #ffd700 178deg,
+    transparent 178deg,
+    transparent 324deg,
+    #ffd700 324deg,
+    #ffed4e 332deg,
+    #ffd700 340deg,
+    transparent 340deg,
+    transparent 360deg
+  );
+}

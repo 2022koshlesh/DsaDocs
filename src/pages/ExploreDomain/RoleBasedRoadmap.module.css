@@ -1,0 +1,317 @@
+/* Container */
+.container {
+  min-height: 100vh;
+  padding: 0.5rem 2rem 2rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-color-content);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, var(--ifm-color-primary), var(--ifm-color-secondary, #8b5cf6));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card Styles */
+.card {
+  position: relative;
+  background: var(--ifm-card-background-color, var(--ifm-background-surface-color));
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    var(--ifm-color-primary-lightest), 
+    var(--ifm-color-secondary-lightest, rgba(139, 92, 246, 0.1)));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  background: var(--ifm-hover-overlay);
+  transform: translateY(-5px);
+  box-shadow: var(--ifm-global-shadow-md);
+  border-color: var(--ifm-color-primary-lighter);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-color-content);
+  transition: color 0.3s ease;
+}
+
+.card:hover .cardTitle {
+  color: var(--ifm-color-primary);
+}
+
+.cardIcons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.cardIcons svg {
+  color: var(--ifm-color-content-secondary);
+  transition: color 0.3s ease;
+}
+
+.card:hover .cardIcons svg {
+  color: var(--ifm-color-primary);
+}
+
+/* New Badge */
+.newBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(45deg, var(--ifm-color-primary), var(--ifm-color-secondary, #a855f7));
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--ifm-overlay-background-color, rgba(0, 0, 0, 0.8));
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalContent {
+  background: var(--ifm-card-background-color, var(--ifm-background-surface-color));
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 90vw;
+  height: 80vh;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: var(--ifm-global-shadow-md);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.modal.active .modalContent {
+  transform: scale(1);
+}
+
+.modalHeader {
+  background: var(--ifm-navbar-background-color, var(--ifm-background-surface-color));
+  color: var(--ifm-color-content);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--ifm-color-content);
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--ifm-color-content);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.modalBody {
+  height: calc(100% - 80px);
+  overflow: hidden;
+}
+
+.modalIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.modalInfo {
+  padding: 20px;
+  text-align: center;
+  color: var(--ifm-color-content);
+}
+
+.modalActions {
+  margin-top: 20px;
+}
+
+.viewRoadmapBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.viewRoadmapBtn:hover {
+  background: var(--ifm-color-primary-dark);
+  color: white;
+  text-decoration: none;
+}
+
+/* Dark mode specific adjustments */
+[data-theme='dark'] .card {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .card:hover {
+  background: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-primary-lighter);
+}
+
+[data-theme='dark'] .newBadge {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Light mode specific adjustments */
+[data-theme='light'] .card {
+  background: white;
+  border-color: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='light'] .card:hover {
+  background: var(--ifm-color-emphasis-0);
+  border-color: var(--ifm-color-primary-lighter);
+}
+
+[data-theme='light'] .newBadge {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.25rem 1rem 1rem 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .modalContent {
+    max-width: 95vw;
+    height: 90vh;
+  }
+
+  .modalHeader {
+    padding: 1rem;
+  }
+
+  .modalTitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .cardTitle {
+    font-size: 1.125rem;
+  }
+
+  .cardIcons svg {
+    width: 16px;
+    height: 16px;
+  }
+}
