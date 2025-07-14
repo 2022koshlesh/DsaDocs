@@ -18,7 +18,7 @@ const CardItems = ({ certifications, variant = "container" }) => {
         <div className={styles.navigationContainer}>
           <div className={styles.scrollContainer} ref={scrollContainerRef}>
             <div className={styles.cardsGrid}>
-              {certifications.map((certification, index) => (
+              {Array.isArray(certifications) && certifications.map((certification, index) => (
                 <div key={index} className={styles.cardItem}>
                   <div
                     className={styles.imageContainer}
@@ -41,6 +41,11 @@ const CardItems = ({ certifications, variant = "container" }) => {
       </div>
     </div>
   );
+};
+
+
+CardItems.defaultProps = {
+  certifications: [],
 };
 
 export default CardItems;
