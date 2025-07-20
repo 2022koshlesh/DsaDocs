@@ -3,7 +3,7 @@ import { TrendingUp, } from 'lucide-react';
 
 export default function RatingHistory({ profileData, platform = 'all' }) {
   // Extract all platform profiles
-  const { platformProfiles } = profileData.platformProfiles || {};
+  const { platformProfiles } = profileData.platformProfiles || [];
   
   // Find specific platform profiles
   const leetcodeProfile = platformProfiles?.find(profile => profile.platform === 'leetcode');
