@@ -1,5 +1,16 @@
-export default function ProfileHeader({ profileData }) {
-  const { firstName, secondName, imageUrl, userDetails } = profileData;
+export default function ProfileHeader({ profileData = {} }) {
+  const {
+    firstName = '',
+    secondName = '',
+    imageUrl = '',
+    profileName = '',
+    profileViews = 0,
+    userDetails = {},
+  } = profileData;
+
+  const personal = userDetails.userPersonalDetails || {};
+  const socialLinks = userDetails.socialMediaProfileList || [];
+  const github = userDetails.githubProfile;
 
   return (
     <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
@@ -14,29 +25,29 @@ export default function ProfileHeader({ profileData }) {
         <h1 className="text-2xl font-bold text-center text-white">
           {firstName} {secondName}
         </h1>
-        <p className="text-gray-400 text-center mt-1">@{profileData.profileName}</p>
+        <p className="text-gray-400 text-center mt-1">@{profileName}</p>
 
-        {userDetails?.userPersonalDetails?.country && (
+        {personal.country && (
           <div className="flex items-center mt-2 text-gray-300">
             <span className="material-icons mr-1 text-sm">public</span>
-            <span>{userDetails.userPersonalDetails.country}</span>
+            <span>{personal.country}</span>
           </div>
         )}
 
-        {userDetails?.userPersonalDetails?.college && (
+        {personal.college && (
           <div className="flex items-center mt-1 text-gray-300">
             <span className="material-icons mr-1 text-sm">school</span>
-            <span>{userDetails.userPersonalDetails.college}</span>
+            <span>{personal.college}</span>
           </div>
         )}
 
         <div className="flex space-x-3 mt-4">
-          {userDetails?.socialMediaProfileList?.map((social, index) => (
+          {socialLinks.map((social, index) => (
             <SocialMediaLink key={index} social={social} />
           ))}
-          {userDetails?.githubProfile && (
+          {github && (
             <a
-              href={`https://github.com/${userDetails.githubProfile}`}
+              href={`https://github.com/${github}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
@@ -52,7 +63,7 @@ export default function ProfileHeader({ profileData }) {
       <div className="mt-6 text-white">
         <div className="flex justify-between items-center mb-2">
           <span className="text-gray-400">Profile Views</span>
-          <span className="font-semibold">{profileData.profileViews}</span>
+          <span className="font-semibold">{profileViews}</span>
         </div>
         <div className="flex justify-between items-center mb-2">
           <span className="text-gray-400">Last Refresh</span>

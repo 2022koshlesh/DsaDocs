@@ -377,5 +377,4 @@ export default function RatingHistory({ profileData, platform = 'all' }) {
     `}</style>
   </div>
 );
-
 }
