@@ -200,7 +200,16 @@ const RoadmapTimeline = ({ achievements, theme }) => {
                     </div>
                   )}
 
-                  <p className={styles.achievementDescription}>
+                  <p
+                    className={styles.achievementDescription}
+                    style={{
+                      lineHeight: "1.6",
+                      textAlign: "justify",
+                      fontSize: "0.95rem",
+                      marginTop: "1rem",
+                      color: theme === "dark" ? "#e0e0e0" : "#333",
+                    }}
+                  >
                     {achievement.description}
                   </p>
                 </div>
@@ -250,11 +259,12 @@ const InterviewProcess = () => {
     {
       id: 1,
       title: "Resume Screening",
-      description:
-        "Resumes showcase skills, experience, and qualifications for effective hiring decisions.",
+      description: `Resume screening is essential because it quickly filters out unqualified applicants,
+                    ensuring only the most suitable and skills-aligned candidates, based on the job description, move forward.
+                    This streamlines the hiring process, saves time, and increases the chances of selecting a candidate who truly fits the role.`,
       lottieUrl:
         "https://lottie.host/d3178be8-1c7a-4660-98ca-e13ab3a2a05c/AFUGb4lDqK.lottie",
-      lottieSize: { width: 200, height: 200 }, // Custom size for this specific animation
+      lottieSize: { width: 200, height: 200 },
       year: "Round 1",
       icon: Code,
       color: "textBlue400",
@@ -263,68 +273,71 @@ const InterviewProcess = () => {
     {
       id: 2,
       title: "Online Test",
-      description:
-        "Assess problem-solving, logic, coding, data structures, and algorithmic thinking skills.",
+      description: `One test includes Aptitude, Computer Science fundamentals, Reasoning, Quantitative ability, English comprehension, and Code Debugging. 
+It is entirely based on multiple-choice questions (MCQs).`,
       lottieUrl:
-        "https://lottie.host/ba455750-3dda-45bb-85d0-c796a712a710/u4oEBxwpoE.lottie", // Replace with actual URL
-      // No lottieSize defined - will use default or auto-adjust
+        "https://lottie.host/ba455750-3dda-45bb-85d0-c796a712a710/u4oEBxwpoE.lottie",
       year: "Round 2",
       icon: Rocket,
       color: "textGreen400",
       bgColor: "bgGreen500",
     },
+   {
+  id: 3,
+  title: "Technical Interview 1",
+  description:
+    "This round primarily tests Data Structures and Algorithms (DSA) through real-time problem-solving. Candidates are expected to write optimized code, explain their approach, and handle edge cases under time constraints.",
+  lottieUrl:
+    "https://lottie.host/c0c55299-33c1-4531-b1e4-a0bf2c4927c1/UKqnrzo0hJ.lottie",
+  lottieSize: { width: 180, height: 120 },
+  year: "Round 3",
+  icon: Users,
+  color: "textPurple400",
+  bgColor: "bgPurple500",
+},
+
     {
-      id: 3,
-      title: "Technical Interview 1",
-      description:
-        "Learn Node.js, Express.js, and database management with RESTful API design patterns.",
-      lottieUrl:
-        "https://lottie.host/c0c55299-33c1-4531-b1e4-a0bf2c4927c1/UKqnrzo0hJ.lottie", // Replace with actual URL
-      lottieSize: { width: 180, height: 120 }, // Custom dimensions for different aspect ratio
-      year: "Round 3",
-      icon: Users,
-      color: "textPurple400",
-      bgColor: "bgPurple500",
-    },
+  id: 4,
+  title: "Technical Interview 2",
+  description:
+    "This round includes coding challenges, system design tasks, and questions from core CS subjects like DBMS, OS, CN, and OOPs. It also involves discussions based on your resume, including past projects, internships, and relevant skills.",
+  lottieUrl:
+    "https://lottie.host/157b5087-098a-4115-9d8f-0ff8a6c5f79e/WkwW8Kx0p0.lottie",
+  // No lottieSize defined - will use default
+  year: "Round 4",
+  icon: Zap,
+  color: "textOrange400",
+  bgColor: "bgOrange500",
+}
+,
     {
-      id: 4,
-      title: "Technical Interview 2",
-      description:
-        "Master CI/CD pipelines, containerization with Docker, and cloud deployment strategies.",
-      lottieUrl:
-        "https://lottie.host/157b5087-098a-4115-9d8f-0ff8a6c5f79e/WkwW8Kx0p0.lottie", // Replace with actual URL
-      // No lottieSize defined - will use default
-      year: "Round 4",
-      icon: Zap,
-      color: "textOrange400",
-      bgColor: "bgOrange500",
-    },
+  id: 5,
+  title: "HR Interview",
+  description:
+    "The HR round focuses on evaluating a candidate's personality, communication skills, cultural fit, and alignment with the company’s values. Topics may include salary expectations, relocation flexibility, career goals, and past experiences.",
+  lottieUrl:
+    "https://lottie.host/e1f4fe5f-bfd6-43e4-8c78-21cb8eb28193/1nh0WVaCTX.lottie", // HR-themed animation
+  lottieSize: { width: 210, height: 210 }, // Square animation
+  year: "Round 5",
+  icon: Users,
+  color: "textBlue400",
+  bgColor: "bgBlue500",
+}
+,
     {
-      id: 5,
-      title: "HR Interview",
-      description:
-        "Explore advanced concepts like microservices, system design, and performance optimization.",
-      lottieUrl:
-        "https://lottie.host/e1f4fe5f-bfd6-43e4-8c78-21cb8eb28193/1nh0WVaCTX.lottie", // Replace with actual URL
-      lottieSize: { width: 210, height: 210 }, // Square animation
-      year: "Round 5",
-      icon: Users,
-      color: "textblue400",
-      bgColor: "bgblue500",
-    },
-    {
-      id: 6,
-      title: "Placed",
-      description:
-        "Explore advanced concepts like microservices, system design, and performance optimization.",
-      lottieUrl:
-        "https://lottie.host/b8de7e54-ad51-45c4-a976-cc1c7f16ee4e/O3Op0hNg0C.lottie", // Replace with actual URL
-      lottieSize: { width: 250, height: 250 }, // Square animation
-      year: "Final Round",
-      icon: Trophy,
-      color: "textRed400",
-      bgColor: "bgRed500",
-    },
+  id: 6,
+  title: "Placed",
+  description:
+    "After successfully clearing all rounds, the candidate receives the final offer letter. This stage marks the official onboarding and confirms placement with the organization.",
+  lottieUrl:
+    "https://lottie.host/b8de7e54-ad51-45c4-a976-cc1c7f16ee4e/O3Op0hNg0C.lottie", // Placement animation
+  lottieSize: { width: 250, height: 250 }, // Square animation
+  year: "Final Round",
+  icon: Trophy,
+  color: "textRed400",
+  bgColor: "bgRed500",
+}
+
   ];
 
   return (
@@ -332,24 +345,24 @@ const InterviewProcess = () => {
       <div className={styles.maxWidth}>
         <BlurFade delay={0}>
           <section style={{ marginBottom: "5rem", marginTop: "7rem" }}>
-           <div style={{ textAlign: "center" }}>
-  <h2
-    className="interview-title"
-    style={{
-      display: "inline-block",
-      padding: "10px 30px",
-      borderRadius: "50px",
-      backgroundColor: "white",
-      color: "black",
-      fontSize: "1.5rem",
-      fontWeight: "bold",
-      fontFamily: "'Courier New', Courier, monospace",
-      marginBottom: "20px",
-    }}
-  >
-    Interview Process
-  </h2>
-</div>
+            <div style={{ textAlign: "center" }}>
+              <h2
+                className="interview-title"
+                style={{
+                  display: "inline-block",
+                  padding: "10px 30px",
+                  borderRadius: "50px",
+                  backgroundColor: "white",
+                  color: "black",
+                  fontSize: "1.5rem",
+                  fontWeight: "bold",
+                  fontFamily: "'Courier New', Courier, monospace",
+                  marginBottom: "20px",
+                }}
+              >
+                Interview Process
+              </h2>
+            </div>
             <p className={styles.sectionDescription}>
               Understand each step of our interview process, from initial
               screening to final evaluation, ensuring a smooth candidate

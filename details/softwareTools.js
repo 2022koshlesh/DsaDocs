@@ -70,11 +70,6 @@ export const softwareTools = [
     website: 'https://getbootstrap.com/',
   },
   {
-    name: 'Codepen',
-    image: '/img/codepen.png',
-    website: 'https://codepen.io/',
-  },
-  {
     name: 'Android Studio',
     image: '/img/androidstudio.png',
     website: 'https://developer.android.com/',
@@ -85,9 +80,19 @@ export const softwareTools = [
     website: 'https://www.figma.com/',
   },
   {
+    name: 'Overleaf',
+    image: '/img/overleaf.jpeg',
+    website: 'https://www.overleaf.com/',
+  },
+  {
     name: 'Discord',
     image: '/img/discord.png',
     website: 'https://discord.com/',
+  },
+  {
+    name: 'Codepen',
+    image: '/img/codepen.png',
+    website: 'https://codepen.io/',
   },
   {
     name: 'Quora',

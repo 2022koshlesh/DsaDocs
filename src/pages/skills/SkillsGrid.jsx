@@ -202,8 +202,6 @@ function SkillsWithNavbar() {
 
       {activeTab === 'roadmaps' && (
         <div className="text-center py-16">
-          {/* <h2 className="text-2xl font-bold text-white mb-4">Roadmaps Coming Soon</h2>
-          <p className="text-gray-400">We're working on comprehensive learning roadmaps for developers.</p> */}
           <Interviewprocess />
         </div>
       )}

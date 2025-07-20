@@ -44,7 +44,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            '#',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -86,6 +86,9 @@ const config = {
             to: '/Miscellaneous/miscellaneous', label: 'Miscellaneous', position: 'left'
           },
           {
+            to: '/Codolio/trackMain', label: 'Coding Profile', position: 'left'
+          },
+          {
             href: '#',
             label: 'GitHub',
             position: 'right',
@@ -97,7 +100,6 @@ const config = {
         indexName: 'hello-trex',
         appId: '2U67935JDX',
         contextualSearch: true,
-        // Optional
 
       },
       footer: {
@@ -127,6 +129,10 @@ const config = {
                 label: 'Discord',
                 href: 'https://discord.com/channels/hacker_915',
               },
+              {
+                label: 'Gmail',
+                href: 'mailto:koshleshkumar21@gmail.com',
+              },
             ],
           },
           {
@@ -137,8 +143,8 @@ const config = {
                 to: '/codingPlatform/coding-platforms',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/2022koshlesh/DsaDocs',
+                label: 'Home',
+                href: 'https://dsa-docs-lemon.vercel.app/',
               },
             ],
           },
