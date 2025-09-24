@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="./static/img/dsa.webp" width="120" alt="DsaDocs logo" />
-</p>
+</p> 
 
 <p align="center">
   <b>Unlock the Power of DSA with Clean, Interactive, and Comprehensive Documentation</b><br/>
